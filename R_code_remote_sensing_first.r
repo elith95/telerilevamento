@@ -75,6 +75,47 @@ plot(b1$B4_sre, col=cl3)
 
 dev.off() 
 
+#DAY 4
+
+#RGB plot
+par(mfrow=c(2,2))
+plotRGB(b1,r=3,g=2,b=1,stretch="Lin") #natural colors -> B3-B2-B1
+plotRGB(b1,r=4,g=3,b=2,stretch="Lin") #false colors -> B4-B3-B2 -> evidenziata vegetazione
+plotRGB(b1,r=3,g=4,b=2,stretch="Lin") #infrared moved on green -> si evidenziano i torrenti e il suolo nudo (viola)
+plotRGB(b1,r=3,g=2,b=4,stretch="Lin") #infrared moved on blue -> suolo nudo giallo
+
+dev.off() 
+
+plotRGB(b1,r=3,g=4,b=2,stretch="hist") #change stretch method -> distingue meglio le aree più umide (violette) da quelle con più copertura
+
+#par natural-false colors-false colors hist
+par(mfrow=c(3,1))
+plotRGB(b1, r=3, g=2, b=1, stretch="Lin")
+plotRGB(b1, r=3, g=4, b=2, stretch="Lin")
+plotRGB(b1, r=3, g=4, b=2, stretch="hist")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
