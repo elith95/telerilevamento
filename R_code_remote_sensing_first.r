@@ -94,34 +94,40 @@ plotRGB(b1, r=3, g=2, b=1, stretch="Lin")
 plotRGB(b1, r=3, g=4, b=2, stretch="Lin")
 plotRGB(b1, r=3, g=4, b=2, stretch="hist")
 
+dev.off()
 
+#DAY 5
 
+b2 <- brick("p224r63_1988_masked.grd")
 
+#Visualization of b2
+par(mfrow = c(2,2))
+plot(b2$B1_sre, col=cl)
+plot(b2$B2_sre, col=cl1)
+plot(b2$B3_sre, col=cl2)
+plot(b2$B4_sre, col=cl3)
 
+dev.off()
 
+plotRGB(b2, r=3, g=2, b=1, stretch="Lin")
+plotRGB(b2, r=4, g=3, b=2, stretch="Lin")
 
+dev.off()
 
+#Comparison of 1988 and 2011
+par(mfrow = c(2,1))
+plotRGB(b2, r=4, g=3, b=2, stretch="Lin")
+plotRGB(b1, r=4, g=3, b=2, stretch="Lin")
 
+dev.off()
 
+par(mfrow = c(2,2))
+plotRGB(b2, r=4, g=3, b=2, stretch="Lin")
+plotRGB(b1, r=4, g=3, b=2, stretch="Lin")
+plotRGB(b2, r=4, g=3, b=2, stretch="hist")
+plotRGB(b1, r=4, g=3, b=2, stretch="hist")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+dev.off()
 
 
 
