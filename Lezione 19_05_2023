@@ -1,0 +1,77 @@
+#Prima funzione per stampare a video "Hello world"
+greet <- function() {
+  print("Hello world")
+}
+
+#Aggiungiamo gli argomenti: funzione che ti saluta
+greet_me <- function(name = "Duccio") {
+  greet_string <- paste("Hello", name, sep = " ")
+  print(greet_string)
+}
+
+#Aggiungiamo un valore di ritorno: funzione per aggiungere 2
+add_two <- function(num = 0) {
+  n_plus_two <- num + 2
+  return(n_plus_two)
+}
+
+#if/else
+n <- 3
+if(n < 10) { 
+  print("n è minore di 10")
+} else if(n > 10) {
+  print("n è maggiore di 10")
+} else {
+  print("n è uguale a 10")
+}
+
+#Funzione per controllare se un numero è minore, maggiore o uguale a 10
+isten <- function(num = 0) {
+  if(num < 10) { 
+    print("n è minore di 10")
+  } else if(num > 10) {
+    print("n è maggiore di 10")
+  } else {
+    print("n è uguale a 10")
+  }
+}
+
+#Aggiungiamo i controlli alle funzioni: errori e warnings
+add_two <- function(num = 0) {
+  if(!is.numeric(num)) stop("num non è numerico")
+  n_plus_two <- num + 2
+  return(n_plus_two)
+}
+
+add_two <- function(num = 0) { 
+  if(is.na(num)) warning("num ha valore NA")
+  n_plus_two <- num + 2 
+  return(n_plus_two) 
+}
+
+#Cicli
+
+for(i in 1:5) {
+  print(i)
+}
+
+#5*3
+num <- 0
+for(i in 1:3) {
+  num <- 0
+  num <- num + 5
+}
+
+#Funzione per moltiplicazione
+
+multiply <- function(n1 = 1, n2 = 1) { 
+  if(!is.numeric(n1) || !is.numeric(n2)) stop("n1 e n2 non sono numerici") 
+  num <- 0 
+  for(i in 1:n1) {
+    num <- num + n2 
+  } 
+  return(num) 
+}
+
+
+
